@@ -1,7 +1,7 @@
 import 'package:animated_snack_bar/animated_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:go_india_stocks/core/app/app_colors.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:go_india_stocks/core/reponsive/responsive_extension.dart';
 
 enum SnackType { error, success, info }
 

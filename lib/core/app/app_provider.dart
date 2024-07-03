@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_india_stocks/core/di/client_module.dart';
 import 'package:go_india_stocks/core/di/repository_module.dart';
 import 'package:go_india_stocks/core/di/usecase_module.dart';
+import 'package:go_india_stocks/core/reponsive/responsive_util_init.dart';
 import 'package:go_india_stocks/features/presentation/bloc/weather_bloc.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class AppProvider extends StatefulWidget {
   const AppProvider({
@@ -22,8 +22,9 @@ class _AppProviderState extends State<AppProvider>
     with ClientModule, RepositoryModule, UsecaseModule {
   @override
   Widget build(BuildContext context) {
-    return ResponsiveSizer(
-      builder: (p0, p1, p2) => MultiRepositoryProvider(
+    return ResponsiveUtilInit(
+      designSize: const Size(375, 812),
+      builder: () => MultiRepositoryProvider(
         providers: [
           RepositoryProvider.value(value: weatherUseCase),
         ],

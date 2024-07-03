@@ -36,7 +36,6 @@ dependencies:
   logger:
   json_annotation: ^4.8.1
   equatable:
-  responsive_sizer:
   shared_preferences:
   animated_snack_bar:
 

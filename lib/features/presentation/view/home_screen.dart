@@ -2,10 +2,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_india_stocks/core/app/app_colors.dart';
+import 'package:go_india_stocks/core/reponsive/responsive_extension.dart';
 import 'package:go_india_stocks/core/resourses/preferences_helper.dart';
 import 'package:go_india_stocks/core/utils/app_snackbar.dart';
 import 'package:go_india_stocks/features/presentation/bloc/weather_bloc.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ));
             } else {
               return Padding(
-                padding: EdgeInsets.all(3.h),
+                padding: EdgeInsets.all(20.w),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -86,14 +86,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         border: OutlineInputBorder(),
                       ),
                     ),
-                    SizedBox(height: 4.h),
+                    SizedBox(height: 20.h),
                     GestureDetector(
                       onTap: _saveCityAndFetchWeather,
                       child: Container(
                         width: double.infinity,
-                        height: 6.h,
+                        height: 50.h,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(3.w),
+                          borderRadius: BorderRadius.circular(8.r),
                           color: black,
                         ),
                         child: const Center(

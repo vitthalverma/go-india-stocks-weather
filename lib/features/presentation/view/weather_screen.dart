@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_india_stocks/core/app/app_colors.dart';
+import 'package:go_india_stocks/core/reponsive/responsive_extension.dart';
 import 'package:go_india_stocks/features/data/model/weather_model.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen({super.key});
@@ -23,56 +23,55 @@ class _WeatherScreenState extends State<WeatherScreen> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(3.w),
+        padding: EdgeInsets.all(20.h),
         child: Column(
           children: [
             Text(
               'Last updated: ${weather.lastUpdated}',
               style: const TextStyle(color: black),
             ),
-            SizedBox(height: 7.h),
+            SizedBox(height: 20.h),
             Center(
               child: SizedBox(
-                height: 20.h,
-                width: 20.h,
+                height: 180.h,
+                width: 180.h,
                 child: Image.network(
                   imageUrl,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            SizedBox(height: 3.h),
             Text(
               weather.weatherCondition,
-              style: TextStyle(fontSize: 17.sp),
+              style: TextStyle(fontSize: 15.sp),
             ),
-            SizedBox(height: 3.h),
+            SizedBox(height: 10.h),
             Text(
               '${weather.currentTemp} °C',
               style: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: 6.h),
+            SizedBox(height: 70.h),
             Row(
               children: [
                 Flexible(
                     child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(10.h),
                   child: Container(
-                    height: 17.h,
+                    height: 120.h,
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
                             'assets/humidity.png',
-                            height: 6.h,
-                            width: 6.h,
+                            height: 50.h,
+                            width: 50.h,
                           ),
-                          SizedBox(height: 2.h),
+                          SizedBox(height: 10.h),
                           Text(
                             '${weather.humidity}%',
                             style: TextStyle(
-                              fontSize: 17.sp,
+                              fontSize: 15.sp,
                             ),
                           ),
                         ],
@@ -82,23 +81,23 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 )),
                 Flexible(
                   child: Padding(
-                    padding: EdgeInsets.all(2.w),
+                    padding: EdgeInsets.all(10.h),
                     child: SizedBox(
-                      height: 17.h,
+                      height: 120.h,
                       child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(
                               Icons.air_rounded,
-                              size: 30.sp,
+                              size: 60.sp,
                               color: Colors.blue.shade300,
                             ),
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 8.h),
                             Text(
                               '${weather.windSpeed} kph',
                               style: TextStyle(
-                                fontSize: 17.sp,
+                                fontSize: 15.sp,
                               ),
                             ),
                           ],
@@ -109,7 +108,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 2.h),
+            SizedBox(height: 30.h),
             IconButton(
               onPressed: () {},
               icon: Icon(
