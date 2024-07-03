@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_india_stocks/adaptive/screen_type.dart';
+import 'package:go_india_stocks/core/adaptive/screen_type.dart';
 
 class SizingInfo {
   SizingInfo({

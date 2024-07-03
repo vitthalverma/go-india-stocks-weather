@@ -30,7 +30,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
               'Last updated: ${weather.lastUpdated}',
               style: const TextStyle(color: black),
             ),
-            SizedBox(height: 20.h),
+            SizedBox(height: 60.h),
             Center(
               child: SizedBox(
                 height: 180.h,
@@ -41,6 +41,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 20.h),
             Text(
               weather.weatherCondition,
               style: TextStyle(fontSize: 15.sp),
@@ -56,7 +57,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 Flexible(
                     child: Padding(
                   padding: EdgeInsets.all(10.h),
-                  child: Container(
+                  child: SizedBox(
                     height: 120.h,
                     child: Center(
                       child: Column(
@@ -107,14 +108,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   ),
                 ),
               ],
-            ),
-            SizedBox(height: 30.h),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.refresh_rounded,
-                size: 22.sp,
-              ),
             ),
           ],
         ),
